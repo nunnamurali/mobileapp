@@ -1,0 +1,19 @@
+
+.input{
+    margin:2%;
+    border-bottom:1px solid white;
+    width:80%;
+}
+
+Actionbar{
+    background:#3279a8;
+        color : white;
+    }
+Label{
+    width:80%; 
+}
+.button{
+    width:80%;
+    border-radius: 5px;
+    margin: 5% 0;
+}

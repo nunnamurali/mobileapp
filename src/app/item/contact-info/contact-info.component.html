@@ -1,0 +1,35 @@
+<ns-actionbar></ns-actionbar>
+<StackLayout class="page" [formGroup]="form">
+    <TextField 
+    hint="Enter Name"
+    class="input" 
+    returnKeyType="next" #nameEl
+    formControlName="name"></TextField>
+    <Label *ngIf="!namecontrolIsValid" text="please enter a vallid name"></Label>
+    <TextField 
+    hint="Enter Mail"
+    class="input" 
+    returnKeyType="next"
+    formControlName="email" #mailEl 
+    ></TextField>
+    <Label *ngIf="!emailcontrolIsValid" text="please enter a vallid mail"></Label>
+    <TextField 
+    hint="Enter Qualifiaction" 
+    class="input"
+    returnKeyType="next"
+    formControlName="qualification"
+    #qualificationEl
+    ></TextField>
+    <Label *ngIf="!qualificationcontrolIsValid" text="please enter Qualification"></Label> 
+    <TextField 
+    hint="Enter Contact No"
+    class="input"
+    returnKeyType="next"
+    formControlName="contactno"
+    (returnPress)="onDone()"
+    #contactEl
+    ></TextField>
+    <Label *ngIf="!contactcontrolIsValid" text="please enter Mobile number"></Label>
+    <button text="Submit" class="button" [isEnabled]="form.valid"
+      (tap)="onSubmit()"></button>
+</StackLayout>

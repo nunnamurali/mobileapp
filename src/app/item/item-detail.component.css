@@ -1,0 +1,19 @@
+.coursedescription,.coursename{
+ font-weight: bold;
+ padding-top: 2%;
+ font-size: 18px;
+ text-align: justify;
+}
+Actionbar{
+    background:#3279a8;
+        color : white;
+    }
+label{
+    margin: 0 5% 0;
+}
+.button{
+    width:80%;
+    border-width: 2px;
+    border-radius: 5px;
+    margin: 5% 0;
+}

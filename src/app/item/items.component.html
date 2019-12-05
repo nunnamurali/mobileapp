@@ -1,0 +1,18 @@
+<ns-actionbar></ns-actionbar>
+<StackLayout class="page">
+    <ScrollView>
+    <label text="Education" class="education" textAlignment="center"></label>
+    <ListPicker id="education" [items]="education" class="picker" selectedIndex="1" (selectedIndexChange)="onSelectedIndexChanged($event)"></ListPicker>
+    <label text="It Course" textAlignment="center"></label>
+    <ListPicker id="itcourse" [items]="itcourse" class="picker"  selectedIndex="0"></ListPicker>
+    <label text="Trendy Courses" textAlignment="center"></label>
+    <ListView height="120" [items]="trendycourse" class="listview"  separatorColor="white">
+        <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+            <GridLayout height="50">
+                <Label [text]="item" class="list-group-item"></Label>
+            </GridLayout>
+        </ng-template>
+    </ListView>
+    <button text="Next" (tap)="onNext()"></button>
+</ScrollView>    
+</StackLayout>

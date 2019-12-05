@@ -1,0 +1,10 @@
+<ns-actionbar></ns-actionbar>
+<StackLayout class="contactpage">
+    <label text="Course Name" class="coursename"></label>
+    <label [text]="item.name" textTransform="capitalize"></label>
+    <label text="Course Description" class="coursedescription"></label>
+    <ScrollView  height="400">
+    <label [text]="item.description" textWrap="true"></label>
+    </ScrollView>
+    <button text="For More Info" class="button" (tap)="onTap()"></button>
+</StackLayout>
