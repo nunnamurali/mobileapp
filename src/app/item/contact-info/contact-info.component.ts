@@ -88,9 +88,9 @@ export class ContactInfoComponent implements OnInit {
             name:name,
             email:email,
             qualification:qualification,
-            contactno:contactno
+            phone_number:contactno
         }
-        this.http.post("http://10.0.2.2:3000/sendmail",user).subscribe(
+        this.http.post("https://evening-shore-29688.herokuapp.com/api/contact",user).subscribe(
             data =>{
                 let res:any= data;
                 console.log(user);
@@ -99,7 +99,6 @@ export class ContactInfoComponent implements OnInit {
                 console.log(err)
             }
         )
-        // console.log(name,email,qualification,contactno);
         utilsModule.openUrl('http://bonamiestech.com/');  
         this.form.reset();
     }

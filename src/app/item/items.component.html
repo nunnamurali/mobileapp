@@ -1,6 +1,5 @@
 <ns-actionbar></ns-actionbar>
 <StackLayout class="page">
-    <ScrollView>
     <label text="Education" class="education" textAlignment="center"></label>
     <ListPicker id="education" [items]="education" class="picker" selectedIndex="1" (selectedIndexChange)="onSelectedIndexChanged($event)"></ListPicker>
     <label text="It Course" textAlignment="center"></label>
@@ -13,6 +12,5 @@
             </GridLayout>
         </ng-template>
     </ListView>
-    <button text="Next" (tap)="onNext()"></button>
-</ScrollView>    
+    <button text="Next" (tap)="onNext()"></button> 
 </StackLayout>

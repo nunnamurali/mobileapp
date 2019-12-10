@@ -5,6 +5,7 @@ import { RouterExtensions } from "nativescript-angular/router";
 import { ItemService } from "./item.service";
 import { Page } from "tns-core-modules/ui/page";
 import { coursesData, itCourseData,trendyCourseData } from "../data/courses-data";
+import { ApiService } from "../services/api-service";
 
 @Component({
     selector: "ns-items",
@@ -13,7 +14,7 @@ import { coursesData, itCourseData,trendyCourseData } from "../data/courses-data
 })
 export class ItemsComponent implements OnInit {
 
-    constructor(private router:RouterExtensions, private itemservice:ItemService, private page:Page) { }
+    constructor(private router:RouterExtensions, private itemservice:ItemService, private page:Page,private apiservice:ApiService) { }
     public education: Array<string> = coursesData;
     public itcourse: Array<string>;
     public trendycourse: Array<string>;

@@ -1,10 +1,16 @@
 <ns-actionbar></ns-actionbar>
-<StackLayout class="contactpage">
+<StackLayout class="detailspage">
     <label text="Course Name" class="coursename"></label>
     <label [text]="item.name" textTransform="capitalize"></label>
     <label text="Course Description" class="coursedescription"></label>
-    <ScrollView  height="400">
+    <ScrollView  height="150">
     <label [text]="item.description" textWrap="true"></label>
     </ScrollView>
+    <div *ngIf="item.content">
+    <label text="Course Content" class="coursecontent"></label>
+    <ScrollView  height="200">
+    <label [text]="item.content" textWrap="true"></label>
+    </ScrollView>
+    </div>
     <button text="For More Info" class="button" (tap)="onTap()"></button>
 </StackLayout>
